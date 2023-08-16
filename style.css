@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism:XROT,YROT@-9,-22;0,0&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+body{
+    background-image: url("land.png");
+}
+.player{
+    width:80px;
+    height:100px;
+    /* border:2px solid red; */
+    background-image:url("player_front.png");
+     background-size:240px 100px;
+     background-position:-80px 0;
+     position:fixed;
+     z-index:1000;
+     /* animation: 0.2s walk linear infinite; */
+}
+.player .active{
+    animation: 0.2s walk linear infinite;
+}
+@keyframes walk{
+0%,32%{
+    background-position:0 0;
+}
+33%,65%{
+    background-position:-80px 0;
+}
+66%,100%{
+    background-position:-160px 0;
+
+}
+}
+.bush{
+width:20px;
+ height:30px;
+ background-size:100% 100%;
+background-image: url("bush.png");
+position:fixed;
+z-index:-1;
+}
+.pokeball{
+    width:30px;
+    height:30px;
+    background-size:100% 100%;
+    background-image:url("pokeball.png");
+    position:fixed;
+
+}
+#scoreval{
+    position:absolute;
+    font-family: 'Tilt Prism', cursive;
+    /* top :40vh; */
+    /* left:5vw; */
+    font-size:40px;
+    color:rgb(17, 4, 165);
+}
